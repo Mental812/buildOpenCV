@@ -3,8 +3,8 @@
 # Copyright(c) JetsonHacks (2017-2019)
 
 OPENCV_VERSION=4.1.1
-# Jetson Nano
-ARCH_BIN=5.3
+# Jetson Xavi
+ARCH_BIN=7.2
 INSTALL_DIR=/usr/local
 # Download the opencv_extras repository
 # If you are installing the opencv testdata, ie
@@ -167,6 +167,9 @@ time cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D BUILD_opencv_python3=ON \
       -D BUILD_TESTS=OFF \
       -D BUILD_PERF_TESTS=OFF \
+      -D WITH_PROTOBUF=OFF \
+      -D BUILD_PROTOBUF=OFF \
+      -D PROTOBUF_UPDATE_FILES=OFF \
       -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
       $"PACKAGE_OPENCV" \
       ../

@@ -13,7 +13,7 @@ Building for:
 This is a long build, you may want to write to a log file, for example:
 
 <blockquote>$ ./buildOpenCV.sh |& tee openCV_build.log</blockquote>
-
+<blockquote>export PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=cpp</blockquote>
 While the build will still be written to the console, the build log will be written to openCV_build.log for later review.
 
 On the Jetson Nano, this is a challenging build. There is not enough memory on the Nano to make with multiple jobs (i.e)
